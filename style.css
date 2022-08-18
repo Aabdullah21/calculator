@@ -55,3 +55,17 @@ body {
     font-size: 32px;
     word-break: break-word;
 }
+
+.clear,
+.delete {
+    width: 163px;
+    height: 50px;
+}
+
+.clear {
+    background-color: #ffaaaa;
+}
+
+.delete {
+    background-color: #aaf;
+}

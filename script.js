@@ -18,6 +18,10 @@ functionButtons.forEach((button) => {
     button.addEventListener('click', (event) => dealWithOperations(event.target));
 })
 
+const equals = document.querySelector('.equal');
+equals.addEventListener('click', () => clickedEqual());
+
+
 function insertNumber(numberButton) {
 
     const result = document.querySelector('.result');

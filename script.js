@@ -10,6 +10,8 @@ deleteButton.addEventListener('click', deleteDigit);
 const clearButton = document.querySelector('.clear');
 clearButton.addEventListener('click', clearCalculator);
 
+const dotButton = document.querySelector('.dot');
+dotButton.addEventListener('click', addDot);
 
 function insertNumber(numberButton) {
 

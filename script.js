@@ -39,3 +39,9 @@ function clearCalculator() {
     result.textContent = 0;
     currComputing.textContent = '';
 }
+
+function addDot() {
+    const result = document.querySelector('.result');
+    if (result.getAttribute('class').includes('equ')) clearCalculator();
+    if (!result.textContent.includes('.')) result.textContent += '.';
+}

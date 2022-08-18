@@ -7,6 +7,9 @@ numbers.forEach(function (num) {
 const deleteButton = document.querySelector('.delete');
 deleteButton.addEventListener('click', deleteDigit);
 
+const clearButton = document.querySelector('.clear');
+clearButton.addEventListener('click', clearCalculator);
+
 
 function insertNumber(numberButton) {
 

@@ -73,3 +73,19 @@ function clickedEqual() {
         if (result.textContent == '') clearCalculator();
     }
 }
+
+function operate(num1, operator, num2) {
+    if (operator == '÷' && num2 == 0) {
+        alert('Cannot divide by zero');
+        return '';
+    } else {
+
+        switch (operator) {
+            case '+': return (+num1 * 10000 + +num2 * 10000) / 10000; break;
+            case '-': return (+num1 * 10000 - +num2 * 10000) / 10000; break;
+            case '×': return (+num1 * +num2); break;
+            case '÷': return (+num1 / +num2); break;
+        }
+    }
+
+}

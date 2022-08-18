@@ -60,3 +60,16 @@ function dealWithOperations(operationButton) {
     currComputing.textContent = `${result.textContent} ${operationButton.textContent}`;
     if (result.textContent == '') clearCalculator();
 }
+
+function clickedEqual() {
+    const result = document.querySelector('.result');
+    const currComputing = document.querySelector('.current-computing');
+    if (!currComputing.textContent.includes('=') && currComputing.textContent != '') {
+        result.classList.add('clicked');
+        result.classList.add('equ');
+        currComputing.textContent += ` ${result.textContent} =`;
+        const arr = currComputing.textContent.split(' ');
+        result.textContent = operate(arr[0], arr[1], arr[2]);
+        if (result.textContent == '') clearCalculator();
+    }
+}

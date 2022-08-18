@@ -68,6 +68,11 @@ function clearCalculator() {
 function addDot() {
     const result = document.querySelector('.result');
     if (result.getAttribute('class').includes('equ')) clearCalculator();
+    if (result.getAttribute('class').includes('clicked')) {
+
+        result.textContent = '0';
+        result.classList.remove('clicked');
+    }
     if (!result.textContent.includes('.')) result.textContent += '.';
 }
 

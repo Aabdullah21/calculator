@@ -1,18 +1,4 @@
-window.addEventListener('keydown', (e) => {
-    if (e.key == 'Backspace' || e.key == 'Delete') deleteDigit();
-    if (e.key == 'Escape') clearCalculator();
-    if (e.key == '.') addDot();
-    numbers.forEach((num) => {
-        if (num.textContent == e.key) insertNumber(num);
-    })
-    functionButtons.forEach((operation) => {
-        if (operation.textContent == e.key) dealWithOperations(operation);
-        if (operation.textContent == '÷' && e.key == '/') dealWithOperations(operation);
-        if (operation.textContent == '×' && e.key == '*') dealWithOperations(operation);
-    })
-    if (e.key == '=' || e.key == 'Enter') clickedEqual();
-});
-
+let counter = 0;
 
 const numbers = document.querySelectorAll('.num');
 numbers.forEach(function (num) {
@@ -128,4 +114,19 @@ function operate(num1, operator, num2) {
     }
 
 }
+
+window.addEventListener('keydown', (e) => {
+    if (e.key == 'Backspace' || e.key == 'Delete') deleteDigit();
+    if (e.key == 'Escape') clearCalculator();
+    if (e.key == '.') addDot();
+    numbers.forEach((num) => {
+        if (num.textContent == e.key) insertNumber(num);
+    })
+    functionButtons.forEach((operation) => {
+        if (operation.textContent == e.key) dealWithOperations(operation);
+        if (operation.textContent == '÷' && e.key == '/') dealWithOperations(operation);
+        if (operation.textContent == '×' && e.key == '*') dealWithOperations(operation);
+    })
+    if (e.key == '=' || e.key == 'Enter') clickedEqual();
+});
 

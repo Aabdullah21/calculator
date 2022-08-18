@@ -4,6 +4,9 @@ numbers.forEach(function (num) {
     num.addEventListener('click', (e) => insertNumber(e.target));
 });
 
+const deleteButton = document.querySelector('.delete');
+deleteButton.addEventListener('click', deleteDigit);
+
 
 function insertNumber(numberButton) {
 

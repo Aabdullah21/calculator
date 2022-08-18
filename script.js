@@ -45,3 +45,18 @@ function addDot() {
     if (result.getAttribute('class').includes('equ')) clearCalculator();
     if (!result.textContent.includes('.')) result.textContent += '.';
 }
+
+function dealWithOperations(operationButton) {
+    const currComputing = document.querySelector('.current-computing');
+    const result = document.querySelector('.result');
+    if (currComputing.textContent != '' && result.getAttribute('class').includes('clicked') == false) {
+        const toBeCalculated = `${currComputing.textContent} ${result.textContent}`.split(' ');
+        result.textContent = operate(toBeCalculated[0], toBeCalculated[1], toBeCalculated[2]);
+
+    }
+    counter = 0;
+    result.classList.add('clicked');
+    result.classList.remove('equ');
+    currComputing.textContent = `${result.textContent} ${operationButton.textContent}`;
+    if (result.textContent == '') clearCalculator();
+}

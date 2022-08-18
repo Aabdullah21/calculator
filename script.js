@@ -13,6 +13,11 @@ clearButton.addEventListener('click', clearCalculator);
 const dotButton = document.querySelector('.dot');
 dotButton.addEventListener('click', addDot);
 
+const functionButtons = document.querySelectorAll('.operation');
+functionButtons.forEach((button) => {
+    button.addEventListener('click', (event) => dealWithOperations(event.target));
+})
+
 function insertNumber(numberButton) {
 
     const result = document.querySelector('.result');

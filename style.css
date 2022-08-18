@@ -92,3 +92,11 @@ button {
     color: #ffffff;
 
 }
+
+.operation {
+    background-color: #131313;
+}
+
+.equal {
+    background-color: #134841;
+}

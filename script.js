@@ -1,3 +1,10 @@
+
+const numbers = document.querySelectorAll('.num');
+numbers.forEach(function (num) {
+    num.addEventListener('click', (e) => insertNumber(e.target));
+});
+
+
 function insertNumber(numberButton) {
 
     const result = document.querySelector('.result');

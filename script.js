@@ -30,3 +30,12 @@ function deleteDigit() {
         if (result.textContent == '') result.textContent = 0;
     }
 }
+
+function clearCalculator() {
+    const result = document.querySelector('.result');
+    const currComputing = document.querySelector('.current-computing');
+    result.classList.remove('clicked');
+    result.classList.remove('equ');
+    result.textContent = 0;
+    currComputing.textContent = '';
+}

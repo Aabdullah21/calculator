@@ -31,7 +31,7 @@ function insertNumber(numberButton) {
             clearCalculator();
             result.classList.remove('equ');
         }
-        if (result.textContent === '0') result.textContent = '';
+        if (result.textContent === '0') { result.textContent = ''; counter--; }
         if (result.getAttribute('class').includes('clicked')) {
             counter++;
             result.textContent = numberButton.textContent;

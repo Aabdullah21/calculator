@@ -63,6 +63,7 @@ function clearCalculator() {
     result.classList.remove('equ');
     result.textContent = 0;
     currComputing.textContent = '';
+    counter = 0;
 }
 
 function addDot() {

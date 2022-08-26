@@ -100,3 +100,29 @@ button {
 .equal {
     background-color: #134841;
 }
+
+button:hover {
+    background-color: #5a5a5a;
+}
+
+button:active {
+    background-color: #6f6f6f;
+}
+
+.equal:hover {
+    background-color: #037A6B;
+}
+
+.equal:active {
+    background-color: #018574;
+}
+
+.clear:hover,
+.delete:hover {
+    background-color: crimson;
+}
+
+.clear:active,
+.delete:active {
+    background-color: rgb(255, 20, 50);
+}

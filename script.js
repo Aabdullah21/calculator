@@ -102,6 +102,7 @@ function clickedEqual() {
         const arr = currComputing.textContent.split(' ');
         result.textContent = operate(arr[0], arr[1], arr[2]);
         if (result.textContent == '') clearCalculator();
+        counter = 0;
     }
 }
 
